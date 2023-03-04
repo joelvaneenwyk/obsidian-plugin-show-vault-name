@@ -1,12 +1,12 @@
 {
-	"name": "obsidian-sample-plugin",
+	"name": "vault-name-status-bar",
 	"version": "1.0.0",
-	"description": "This is a sample plugin for Obsidian (https://obsidian.md)",
+	"description": "See your vault name in the status bar.",
 	"main": "main.js",
 	"scripts": {
 		"dev": "node esbuild.config.mjs",
 		"build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production",
-		"version": "node version-bump.mjs && git add manifest.json versions.json"
+		"version": "1.0.0"
 	},
 	"keywords": [],
 	"author": "",
