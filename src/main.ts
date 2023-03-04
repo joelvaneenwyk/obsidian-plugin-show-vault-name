@@ -6,11 +6,11 @@ export default class MyPlugin extends Plugin {
 	async onload() {
 		const vaultName = this.app.vault.getName();
 		this.statusBarVaultName = this.addStatusBarItem();
-		this.statusBarVaultName.createEl("strong", { text: vaultName });
-		// this.statusBarVaultName.setText(vaultName);
+		this.statusBarVaultName
+			.createEl("big")
+			.createEl("strong", { text: vaultName });
 	}
 	onunload() {
-		// this.statusBarVaultName.setText("");
 		this.statusBarVaultName.remove;
 	}
 }

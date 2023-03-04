@@ -1,12 +1,12 @@
 {
 	"name": "vault-name-status-bar",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "See your vault name in the status bar.",
 	"main": "main.js",
 	"scripts": {
 		"dev": "node esbuild.config.mjs",
 		"build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production",
-		"version": "1.0.0"
+		"version": "1.0.1"
 	},
 	"keywords": [],
 	"author": "",
