@@ -5,9 +5,12 @@ export default class MyPlugin extends Plugin {
 
 	async onload() {
 		const vaultName = this.app.vault.getName();
-		this.statusBarVaultName = this.addStatusBarItem();
-		this.statusBarVaultName
-			.createEl("big")
-			.createEl("strong", { text: vaultName });
+		// Create your custom status bar item and set its contents
+		setTimeout(() => {
+			this.statusBarVaultName = this.addStatusBarItem();
+			this.statusBarVaultName
+				.createEl("big")
+				.createEl("strong", { text: "| " + vaultName });
+		}, 50); // insure always last position
 	}
 }
