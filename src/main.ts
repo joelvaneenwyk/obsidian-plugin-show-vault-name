@@ -10,7 +10,4 @@ export default class MyPlugin extends Plugin {
 			.createEl("big")
 			.createEl("strong", { text: vaultName });
 	}
-	onunload() {
-		this.statusBarVaultName.remove;
-	}
 }
