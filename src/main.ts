@@ -10,7 +10,7 @@ export default class MyPlugin extends Plugin {
 			this.statusBarVaultName = this.addStatusBarItem();
 			this.statusBarVaultName
 				.createEl("big")
-				.createEl("strong", { text: "| " + vaultName });
+				.createEl("strong", { text: vaultName });
 		}, 50); // insure always last position
 	}
 }
