@@ -1,6 +1,6 @@
 import { Plugin } from "obsidian";
 
-export default class MyPlugin extends Plugin {
+export default class statusBarVaultName extends Plugin {
 	statusBarVaultName: HTMLElement;
 
 	async onload() {
