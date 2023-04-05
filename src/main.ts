@@ -11,6 +11,6 @@ export default class statusBarVaultName extends Plugin {
 			this.statusBarVaultName
 				.createEl("big")
 				.createEl("strong", { text: vaultName });
-		}, 50); // insure always last position
+		}, 200); // insure always last position
 	}
 }
