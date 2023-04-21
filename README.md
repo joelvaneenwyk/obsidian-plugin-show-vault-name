@@ -8,4 +8,4 @@ N.B: You can change the style in the css file
 ![img1](./enlarged.jpg)  ![img2](./reduced.jpg)  
 
 ![demo](NameVaultStatusBar.gif)
-[Click here for a pop-up window](popup.html)
+[Click here for a pop-up window](popup.html) 
