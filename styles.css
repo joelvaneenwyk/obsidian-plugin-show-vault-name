@@ -1,8 +1,5 @@
-/*
-
-This CSS file will be included with your plugin, and
-available in the app when your plugin is enabled.
-
-If your plugin does not need CSS, delete this file.
-
-*/
+.status-bar-vault-name {
+  font-size: 110%;
+  font-weight: bold;
+  color: rgb(0, 115, 255);
+}

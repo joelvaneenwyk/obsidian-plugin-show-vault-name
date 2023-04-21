@@ -17,29 +17,24 @@ export default class StatusBarVaultName extends Plugin {
 		this.addSettingTab(new Settings(this.app, this));
 		const { workspace } = this.app;
 		const vaultName = this.app.vault.getName();
-		const statusBar = document.querySelector('div .status-bar')
+		const statusBar = document.querySelector('.status-bar')
 		this.title = document.createElement('div');
-		this.settings.reducedAtStart ? this.title.innerHTML = "::" : this.title.innerHTML = vaultName
+		this.settings.reducedAtStart ? this.title.innerText = "::" : this.title.innerText = vaultName
 		this.title.classList.add("status-bar-vault-name");
-		this.title.style.fontSize = "110%";
-		this.title.style.fontWeight = "bold";
 		statusBar?.prepend(this.title)
 
 		this.title.addEventListener('click', () => {
-			if (this.title.innerHTML === vaultName) {
-				this.title.innerHTML = "::";
+			if (this.title.innerText === vaultName) {
+				this.title.innerText = "::";
 			} else {
-				this.title.innerHTML = vaultName;
+				this.title.innerText = vaultName;
 			}
 		});
-
-		// this.saveSettings();
 
 	}
 
 	onunload() {
-		const statusBar = document.querySelector('div .status-bar')
-		statusBar?.removeChild(this.title);
+		this.title.detach()
 
 	}
 	async loadSettings() {
@@ -53,8 +48,6 @@ export default class StatusBarVaultName extends Plugin {
 	async saveSettings() {
 		await this.saveData(this.settings);
 	}
-
-
 
 }
 
@@ -84,8 +77,8 @@ class Settings extends PluginSettingTab {
 						this.plugin.settings.reducedAtStart = value;
 						this.plugin.saveSettings();
 						this.plugin.settings.reducedAtStart
-							? (this.plugin.title.innerHTML = "::")
-							: (this.plugin.title.innerHTML = this.app.vault.getName());
+							? (this.plugin.title.innerText = "::")
+							: (this.plugin.title.innerText = this.app.vault.getName());
 					});
 			});
 	}
