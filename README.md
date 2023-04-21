@@ -1,6 +1,7 @@
 # Vault Name in Status Bar  
 
-Add your vault name to the status bar.   
-Sometime this is not visible in Obsidian, so you can check there too
+Add your vault name to the status bar.
+Can be reduced to :: by cliking on it  
+Option setting to have it reduced at start or not
 
-![demo](./image.jpg)
+![demo](./enlarged.jpg)  ![demo](./reduced.jpg)
