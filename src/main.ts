@@ -78,9 +78,9 @@ class Settings extends PluginSettingTab {
 			.addToggle((toggle) => {
 				toggle
 					.setValue(this.plugin.settings.reducedAtStart)
-					.onChange((value) => {
+					.onChange(async (value) => {
 						this.plugin.settings.reducedAtStart = value;
-						this.plugin.saveSettings();
+						await this.plugin.saveSettings();
 						this.plugin.settings.reducedAtStart
 							? (this.plugin.title.innerText = "::")
 							: (this.plugin.title.innerText = this.app.vault.getName());
@@ -93,7 +93,7 @@ class Settings extends PluginSettingTab {
 				.onChange(async (value) => {
 					this.plugin.settings.color = value;
 					this.plugin.title.style.color = value;
-					this.plugin.saveSettings();
+					await this.plugin.saveSettings();
 				})
 			)
 		setting
